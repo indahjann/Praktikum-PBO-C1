@@ -62,18 +62,18 @@ public class Garis {
     }
 
     //mendapatkan titik tengah dari sebuah garis
-    Titik getetngahGaris(){
+    Titik getTengahGaris(){
         return new Titik((titikAwal.getAbsis()+titikAkhir.getAbsis())/2 , (titikAwal.getOrdinat() + titikAkhir.getOrdinat())/2);
     }
 
     //mengecek apakah garis tersebut sejajar dengan sebuah garis lainnya
     boolean isSejajar(Garis G){
-        return gradienGaris() == G.gradienGaris();
+        return getGradienGaris() == G.getGradienGaris();
     }
 
     //mengecek apakah garis tersebut tegak lurus dengan sebuah garis lainnya
     boolean isTegakLurus(Garis G){
-        return gradienGaris() * G.gradienGaris() == -1;
+        return getGradienGaris() * G.getGradienGaris() == -1;
     }
 
     //menampilkan titik awal dan titik akhir garis
@@ -86,8 +86,8 @@ public class Garis {
 
     //menampilkan persamaan garis dalam bentuk string y = mx + c
     void printPersamaan(){
-        double c = titikAwal.getOrdinat() - (titikAwal.getAbsis() * gradienGaris());
-        System.out.print("y = " + gradienGaris() + ".x + ");
+        double c = titikAwal.getOrdinat() - (titikAwal.getAbsis() * getGradienGaris());
+        System.out.print("y = " + getGradienGaris() + ".x + ");
         System.out.println(c);
     }
 
