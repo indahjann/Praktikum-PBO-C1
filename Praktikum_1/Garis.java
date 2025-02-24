@@ -52,27 +52,27 @@ public class Garis {
     }
 
     //mendapatkan panjang sebuah garis
-    double panjangGaris(){
+    double getPanjangGaris(){
         return Math.sqrt(Math.pow((titikAwal.getAbsis()-titikAkhir.getAbsis()), 2) + Math.pow((titikAwal.getOrdinat()-titikAkhir.getOrdinat()),2));
     }
 
     //mendapatkan gradien dari sebuah garis
-    double gradienGaris(){
+    double getGradienGaris(){
         return (titikAwal.getOrdinat()-titikAkhir.getOrdinat())/(titikAwal.getAbsis()-titikAkhir.getAbsis());
     }
 
     //mendapatkan titik tengah dari sebuah garis
-    Titik tengahGaris(){
+    Titik getetngahGaris(){
         return new Titik((titikAwal.getAbsis()+titikAkhir.getAbsis())/2 , (titikAwal.getOrdinat() + titikAkhir.getOrdinat())/2);
     }
 
     //mengecek apakah garis tersebut sejajar dengan sebuah garis lainnya
-    boolean cekSejajar(Garis G){
+    boolean isSejajar(Garis G){
         return gradienGaris() == G.gradienGaris();
     }
 
     //mengecek apakah garis tersebut tegak lurus dengan sebuah garis lainnya
-    boolean cekTegakLurus(Garis G){
+    boolean isTegakLurus(Garis G){
         return gradienGaris() * G.gradienGaris() == -1;
     }
 
