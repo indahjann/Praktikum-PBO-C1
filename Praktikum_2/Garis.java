@@ -1,7 +1,7 @@
 /*
  * Nama File      : Garis.java
  * Deskripsi      : berisi atribut dan method dalam class Garis
- * Pembuat        : Indah Nurul Janah
+ * Pembuat        : Indah Nurul Janah/24060123120009
  * Tanggal        : 19 Februari 2025
  */
 
